@@ -29,6 +29,20 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
+				<configuration>
+					<cloudHubDeployment>
+						<uri>${MULE_URI}</uri>
+						<businessGroup>${MULE_BUSS_GRP}</businessGroup>
+						<objectStoreV2>${MULE_OBJ_STR2}</objectStoreV2>>
+						<username>${MULE_USERNAME}</username>
+						<password>${MULE_PASSWORD}</password>
+						<environment>${MULE_ENV}</environment>
+						<workers>${MULE_WORKER}</workers>
+						<workerType>${MULE_WORKER_TYP}</workerType>
+						<applicationName>${MULE_APP_NAME}</applicationName>
+						<muleVersion>${MULE_VERSION}</muleVersion>
+					</cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -74,5 +88,12 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+	
+	<distributionManagement>
+		<repository>
+			<id>BuildKitePersonalTest</id>
+			<url>https://github.com/riffer7/BuildKitePersonalTest</url>
+		</repository>
+	</distributionManagement>
 
 </project>
