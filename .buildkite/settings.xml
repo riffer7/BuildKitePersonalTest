@@ -6,7 +6,7 @@
       <server>
          <id>BuildKitePersonalTest</id>
          <username>riffer7</username>
-         <password>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</password>
+         <password>${secrets.REPOSITORY_TOKEN}</password>
       </server>
    </servers>
    <profiles>
